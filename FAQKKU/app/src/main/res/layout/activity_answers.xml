@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".AnswersActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        card_view:cardElevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        card_view:cardCornerRadius="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="7dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+
+            <TextView
+                android:id="@+id/tv_que"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20sp"
+                android:text="@string/txt_q"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+            <TextView
+
+                android:id="@+id/tv_que_input"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_que"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20sp"
+                android:text="@string/txt_question"
+                android:textSize="20sp"
+                tools:ignore="RelativeOverlap"
+                android:layout_toEndOf="@+id/tv_que"
+                android:layout_marginStart="5dp" />
+
+            <ToggleButton
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/toggleButton_ans"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                style="@style/toggleButton"
+                android:background="@drawable/ic_toggle_bg"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp" />
+
+            <View
+                android:layout_below="@+id/tv_que_input"
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#C9C9C9" />
+
+            <TextView
+                android:id="@+id/tv_ans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider2"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_a"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/tv_ans_input"
+                android:layout_toRightOf="@+id/tv_ans"
+                android:layout_marginLeft="5dp"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider2"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/txt_answers"
+                android:textSize="20sp"
+                tools:ignore="RelativeOverlap"
+                android:layout_toEndOf="@+id/tv_ans"
+                android:layout_marginStart="5dp" />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_ans"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
